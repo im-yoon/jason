@@ -121,7 +121,7 @@
                     }
                 });
                 
-                //메인버튼 이벤트
+                //메인버튼 이벤트..
                 mainBtn.on({
                     mouseenter: function(){
                         if(_window.innerWidth()>780){
