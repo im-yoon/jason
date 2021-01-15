@@ -9,6 +9,7 @@
             that.section3Fn();
             that.section4Fn();
             that.section5Fn();
+            that.loginSection2Fn();
 
         },
         headerFn:function(){
@@ -143,14 +144,14 @@
         },
         section1Fn:function(){
             var cnt=0; //증가변수
-            var n = $('#section1 .slide').length-2; //더한 갯수 만큼 빼준다.
-            var _slide =  $('#section1 .slide');
-            var _nextBtn = $('#section1 .next-btn');
-            var _prevBtn = $('#section1 .prev-btn');
-            var _slideWrap = $('#section1 .slide-wrap');
-            var _pageBtn = $('#section1 .page-btn');
-            var _slideCon = $('#section1 .slide-container');
-            var _smoothBtn = $('#section1 .smooth-btn');
+            var n = $('#main #section1 .slide').length-2; //더한 갯수 만큼 빼준다.
+            var _slide =  $('#main #section1 .slide');
+            var _nextBtn = $('#main #section1 .next-btn');
+            var _prevBtn = $('#main #section1 .prev-btn');
+            var _slideWrap = $('#main #section1 .slide-wrap');
+            var _pageBtn = $('#main #section1 .page-btn');
+            var _slideCon = $('#main #section1 .slide-container');
+            var _smoothBtn = $('#main #section1 .smooth-btn');
             var setId = null; //값 할당받는 변수
             var setId2 = null; 
             var $second = 4;
@@ -287,7 +288,7 @@
                 winW =$(window).width(); //리얼하게 너비
                 winH =$(window).height(); //안 넣어주면 새로고침해야 바뀜
                 $('#section1').css({height:winH}); //리얼하게 적용(즉시)
-                $('#section2').css({marginTop:winH});
+                $('#main #section2').css({marginTop:winH});
                 _slide.css({width:winW});
                 mainSlideFn();
             }
@@ -303,12 +304,12 @@
         },
         section2Fn:function(){
             var _win = $(window);
-            var _gal = $('.gallery li');
-            var _galW = $('.gallery li').width();
+            var _gal = $('#main .gallery li');
+            var _galW = $('#main .gallery li').width();
             var _galH = _galW * 0.832468967;
 
                 function resizeFn(){
-                    _galW = $('.gallery li').width(); //칸 너비
+                    _galW = $('#main .gallery li').width(); //칸 너비
                     _galH = _galW * 0.832468967; //칸 높이 비율 계산
                     _gal.css({height:_galH});
                 }
@@ -325,19 +326,19 @@
 
             var _win = $(window);
             var _winW = $(window).innerWidth();
-            var _slidView = $('#section3 .slide-view');
-            var _pageBtnW = $('#section3 .pageBtn').innerWidth();
-            var _pageWrap = $('#section3 .page-wrap');
-            var _slideBg = $('#section3 .slide-bg-img');
-            var _slideBgW = $('#section3 .slide-bg-img').innerWidth();
+            var _slidView = $('#main #section3 .slide-view');
+            var _pageBtnW = $('#main #section3 .pageBtn').innerWidth();
+            var _pageWrap = $('#main #section3 .page-wrap');
+            var _slideBg = $('#main #section3 .slide-bg-img');
+            var _slideBgW = $('#main #section3 .slide-bg-img').innerWidth();
 
                 
         
 
                 function resizeFn(){
                     _winW = $(window).innerWidth();
-                    _pageBtnW  = $('#section3 .pageBtn').innerWidth();
-                    _slideBgW  = $('#section3 .slide-bg-image').innerWidth();
+                    _pageBtnW  = $('#main #section3 .pageBtn').innerWidth();
+                    _slideBgW  = $('#main #section3 .slide-bg-image').innerWidth();
                     
                     if(_winW<=1360){
                         _slidView.css({height:_winW*0.419117647}); //1360 570
@@ -359,11 +360,11 @@
 
                 var cnt = 0;
                 var setId = null;
-                var n        = $('#section3 .slide').length-1; //2 = 3 -1 => index(0,1,2)
-                var $nextBtn = $('#section3 .nextBtn');
-                var $prevBtn = $('#section3 .prevBtn');
-                var $slide   = $('#section3 .slide');
-                var $pageBtn = $('#section3 .pageBtn');
+                var n        = $('#main #section3 .slide').length-1; //2 = 3 -1 => index(0,1,2)
+                var $nextBtn = $('#main #section3 .nextBtn');
+                var $prevBtn = $('#main #section3 .prevBtn');
+                var $slide   = $('#main #section3 .slide');
+                var $pageBtn = $('#main #section3 .pageBtn');
                 var a = [1,2];
 
                 
@@ -507,13 +508,13 @@
             //1.슬라이드너비는 1570/3=523.3333333
             //반응형으로 슬라이드 컨테이너('.slide-container) 박스 너비 변화에 따른 슬라이드 너비 게산
 
-            var totN       = $('#section4 .slide').length; //10
+            var totN       = $('#main #section4 .slide').length; //10
             var slideN     = 3;//desktop 980초과 3, tablet 980 이하 2,mobile 600 1 
-            var $slideCon  = $('#section4 .slide-container');
-            var slideW     = $('#section4 .slide-container').innerWidth()/slideN;
-            var $slideWrap = $('#section4 .slide-wrap');
-            var $slide     = $('#section4 .slide'); 
-            var $pageBtn     = $('#section4 .pageBtn'); 
+            var $slideCon  = $('#main #section4 .slide-container');
+            var slideW     = $('#main #section4 .slide-container').innerWidth()/slideN;
+            var $slideWrap = $('#main #section4 .slide-wrap');
+            var $slide     = $('#main #section4 .slide'); 
+            var $pageBtn     = $('#main #section4 .pageBtn'); 
             var $window    = $(window);
             var cnt        = 0;
             var setId      = null;
@@ -622,8 +623,11 @@
                 }
 
         },
-        section5Fn:function(){
-            /* dd */
+
+
+        //로그인 페이지
+        loginSection2Fn:function(){
+           
         }
      
     };
