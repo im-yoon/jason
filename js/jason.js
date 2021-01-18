@@ -10,6 +10,7 @@
             that.section4Fn();
             that.section5Fn();
             that.loginSection2Fn();
+            that.main1_1Fn();
 
         },
         headerFn:function(){
@@ -625,10 +626,45 @@
         },
 
 
-        //로그인 페이지
-        loginSection2Fn:function(){
+        
+        loginSection2Fn:function(){ //로그인 페이지
            
+        },
+        main1_1Fn:function(){  //메인 1-1 페이지
+           //섹션 2의 .wrap 너비에 대한 갤러리 이미지 높이 설정
+           var $section2WrapW = $('#main1-1 #section2 .wrap').innerWidth();//.wrap 너비
+           var $section2ImgWrap = $('#main1-1 #section2 .imag-wrap');//갤러리 이미지 박스
+           var $window =$(window);
+           var $winW =$(window).innerWidth();
+           var n =3;
+
+            function resizeFn(){
+                if($winW > 1280){
+                    n = 3;
+                }
+                else if($winW > 860){ 
+                    n = 2;
+                }
+                else{
+                    n = 1;
+                }
+                $section2WrapW = $('#main1-1 #section2 .wrap').innerWidth();
+                $section2ImgWrap.css({height:($section2WrapW/n)*0.689984636});//갤러리 이미지박스 높이
+
+                console.log('갯수',n);
+                console.log('이미지너비',$section2WrapW);
+               
+            }
+
+            setTimeout(resizeFn, 10);
+
+            $window.resize(function(){
+                resizeFn();
+            });
+                
+                
         }
+
      
     };
     jason.init();
