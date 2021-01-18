@@ -77,12 +77,15 @@
     #wrap #login #section2 .wrap .gap .container .content > ul > li .content-gap .title h3 {color:#222;font-size:16px;}
     #wrap #login #section2 .wrap .gap .container .content > ul > li .content-gap .title h2 {color:#2e3192;font-size:30px;}
 }
+@media all and (max-width:980px){
+    #wrap #main1-1 #section2 .wrap .gap .container .content .gallery-wrap li {width:100%;}
+   /*  #wrap #main1-1 #section2 .wrap .gap .container .content .gallery-wrap li .gallery-gap .img-wrap {height:533.3868px;} *//* 860/1=(860*0.689984636)-60 */
+}
 @media all and (max-width:860px){
     #wrap #footer .wrap .gap .container .content .right-wrap .address-row1 .address-row1-left {float:none;margin-bottom:20px;padding-bottom:10px;} 
     #wrap #footer .wrap .gap .container .content .right-wrap .address-row1 .address-row1-right {float:none;padding-bottom:10px;} 
 
-    #wrap #main1-1 #section2 .wrap .gap .container .content .gallery-wrap li {width:100%;}
-   /*  #wrap #main1-1 #section2 .wrap .gap .container .content .gallery-wrap li .gallery-gap .img-wrap {height:533.3868px;} *//* 860/1=(860*0.689984636)-60 */
+    
 }
 @media all and (max-width:780px){
     #wrap #header {height:64px;} 
