@@ -626,7 +626,7 @@
         },
 
 
-        
+        //로그인 페이지 AJAX 구현
         loginSection2Fn:function(){ //로그인 페이지
            
         },
@@ -639,20 +639,23 @@
            var n =3;
 
             function resizeFn(){
+                $winW =$(window).innerWidth();
+
                 if($winW > 1280){
                     n = 3;
                 }
                 else if($winW > 860){ 
                     n = 2;
                 }
-                else{
+                else{ //98이하이면 이미지 1개
                     n = 1;
                 }
-                $section2WrapW = $('#main1-1 #section2 .wrap').innerWidth();
-                $section2ImgWrap.css({height:($section2WrapW/n)*0.689984636});//갤러리 이미지박스 높이
+                $section2WrapW = $('#main1-1 #section2 .wrap').innerWidth(); //메인 1-1 영역
+                $section2ImgWrap.css({height:($section2WrapW/n)*0.6});//갤러리 이미지박스 높이
 
                 console.log('갯수',n);
                 console.log('이미지너비',$section2WrapW);
+                console.log('이미지높이',($section2WrapW/n)*0.6);
                
             }
 
